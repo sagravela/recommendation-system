@@ -1,0 +1,15 @@
+.env
+/**/__pycache__
+.venv/
+/data
+/**/products
+/airflow/*
+!airflow/dags/
+/logs
+/**/model/*
+!model/params.json
+/optuna/*
+!optuna/opt_config.json
+/*.ipynb
+/kaggle
+*.parquet

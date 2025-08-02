@@ -1,0 +1,58 @@
+{
+    "study_name": "recommendation_engine",
+    "study_path": "optuna/hp.log",
+    "retrieval_metric": "val_factorized_top_k/top_50_categorical_accuracy",
+    "hyperparameters": {
+        "initial_learning_rate": [
+            0.1,
+            0.01
+        ],
+        "emb_weight": [
+            4,
+            8,
+            12,
+            16
+        ],
+        "dropout": [
+            0.1,
+            0.2,
+            0.3,
+            0.4,
+            0.5
+        ],
+        "cross_layer": [
+            true,
+            false
+        ],
+        "optimizer": [
+            "Adagrad",
+            "Adam"
+        ],
+        "query_layers": [],
+        "candidate_layers": [],
+        "output_layer": [
+            8,
+            16,
+            32,
+            64
+        ],
+        "rating_layers": [
+            [
+                8,
+                16,
+                32,
+                64,
+                128,
+                256
+            ],
+            [
+                8,
+                16,
+                32,
+                64,
+                128,
+                256
+            ]
+        ]
+    }
+}

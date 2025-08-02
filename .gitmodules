@@ -1,0 +1,6 @@
+[submodule "src/rec_engine"]
+	path = src/rec_engine
+	url = https://github.com/sagravela/rec_engine.git
+[submodule "app"]
+	path = app
+	url = https://huggingface.co/spaces/sagravela/ecommerce-recommendation-system
