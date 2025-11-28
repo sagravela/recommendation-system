@@ -4,3 +4,10 @@
 [submodule "app"]
 	path = app
 	url = https://huggingface.co/spaces/sagravela/ecommerce-recommendation-system
+[submodule "model"]
+	path = model
+	url = https://github.com/sagravela/ecommerce-recommender.git
+
+[submodule "api"]
+	path = api
+	url = https://github.com/sagravela/rec-engine-api.git

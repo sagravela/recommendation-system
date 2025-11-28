@@ -1,5 +1,0 @@
-pydantic
-fastapi
-uvicorn
-tensorflow==2.15.1
-git+https://github.com/sagravela/rec_engine.git
