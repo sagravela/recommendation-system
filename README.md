@@ -21,3 +21,24 @@ This project demonstrates the end-to-end implementation of a deep learning-based
 - **Optuna Optimization**: Utilizes Optuna for hyperparameter optimization, allowing the model to find the best configuration for the given dataset.
 
 Try out the demo on [Hugging Face Space](https://huggingface.co/spaces/sagravela/ecommerce-recommendation-system).
+
+Query the API directly with the following curl command:
+
+```bash
+curl -X POST https://sagravela-ecommerce-recommendation-system.hf.space/gradio_api/call/recommendation_interface -s -H "Content-Type: application/json" -d '{
+  "data": [
+       "Paid Social",
+       "Mobile",
+       "pie"
+]}' \
+  | awk -F'"' '{ print $4}'  \
+  | read EVENT_ID; curl -N https://sagravela-ecommerce-recommendation-system.hf.space/gradio_api/call/recommendation_interface/$EVENT_ID
+```
+
+The `data` field accepts a list of three strings in order by the following schema:
+
+```python
+channel: Literal['Paid Social', 'Paid Search - Brand', 'Organic', 'Email - Transactional', 'Affiliate', 'Paid Search', 'Direct', 'Referral', 'Email - Marketing', 'Paid Search - Brand Reactivation', 'SMS - Marketing', 'Email - Trigger', 'Referral - Whitelabel', 'Referral - Merchant', 'Social', 'SMS - Trigger']
+device: Literal['Mobile', 'Desktop', 'Phablet', 'Tablet', 'TV', 'Portable Media Player', 'Wearable']
+search_query: String
+```
